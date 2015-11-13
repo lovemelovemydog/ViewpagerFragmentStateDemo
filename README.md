@@ -1,6 +1,8 @@
 # ViewpagerFragmentStateDemo
 keep fragment has listview in viewpager 
 
+
+网看见的 mark一下
 ViewPager中切换界面Fragment被销毁
 
 ViewPager的默认加载方式是缓存当前界面前后相邻的两个界面，即最多共缓存包括当前界面在内的三个界面信息。当滑动切换界面的时候，非相邻界面信息将被释放。界面2是当前界面，界面1和3是缓存界面，当切换到1时，界面2仍缓存，界面3被销毁释放，于是便有了onDestroyView的调用。由1切换到2或3时，界面3又被重新创建，于是走了onCreateView流程。
